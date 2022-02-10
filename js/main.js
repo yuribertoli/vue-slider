@@ -59,10 +59,17 @@ const root = new Vue ({
             this.active = index;
         },
 
-        /* activate(element){
-            this.active = element;
-        } */
+        autoplay() {
+            let slide;
+            slide = setInterval(function() {
+                this.active++
+            }, 1000);
+        }
 
+    },
+
+    mounted() {
+        this.autoplay();
     }
 
 });
