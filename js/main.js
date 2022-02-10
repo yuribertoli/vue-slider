@@ -61,6 +61,7 @@ const root = new Vue ({
 
     },
 
+    //Utilizzo da subito la funzione next per mandare in avanti ogni 3 secondi le slide
     mounted() {
         setInterval(this.next, 3000);
     }
