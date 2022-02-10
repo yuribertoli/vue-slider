@@ -35,7 +35,7 @@ const root = new Vue ({
         //Al caricamento della pagina lascio il primo oggetto di items come default da visualizzare
         active: 0,
 
-        //Creo un valore vuoto dove aggiungo in seguito gli eventi dell'autoplay
+        //Creo una variabile vuota dove aggiungo in seguito gli eventi dell'autoplay
         autoplay: ""
 
     },
