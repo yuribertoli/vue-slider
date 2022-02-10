@@ -4,7 +4,7 @@ const root = new Vue ({
 
     data: {
 
-        items = [
+        items: [
             {
                 url:'img/01.jpg',
                 name:'Svezia',
@@ -36,7 +36,7 @@ const root = new Vue ({
     },
 
     methods: {}
-    
+
 });
 
 
