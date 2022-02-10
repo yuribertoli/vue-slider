@@ -32,16 +32,36 @@ const root = new Vue ({
             }
         ],
 
+        //Al caricamento della pagina lascio il primo oggetto di items come default da visualizzare
         active: 0
     },
 
-    methods: {}
+    methods: {
+
+        previous() {
+            if (this.active == 0) { //se active è sul primo elemento
+                this.active = this.items.length - 1; //lo riporto all'ultimo elemento dell'array
+            } else {
+                this.active--; //altrimenti continuo ad aggiungere + 1
+            }
+        },
+
+        next() {
+            if (this.active == this.items.length - 1) { //se active è sull'ultimo elemento dell'array
+                this.active = 0; //lo riporto al primo
+            } else {
+                this.active++; //altrimenti continuo a togliere - 1
+            }
+        }
+
+    }
 
 });
 
 
 
-/* 
+/* SENZA VUE.JS
+
 const itemsRef = document.getElementsByClassName('items')[0];
 const thumbsRef = document.getElementsByClassName('thumbs')[0];
 let item = '';
