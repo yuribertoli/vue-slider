@@ -60,16 +60,16 @@ const root = new Vue ({
         },
 
         autoplay() {
-            let slide;
-            slide = setInterval(function() {
-                this.active++
-            }, 1000);
+            if (this.active == this.items.length - 1) { //se active è sull'ultimo elemento dell'array
+                this.active = 0; //lo riporto al primo
+            } else {
+                this.active++; //altrimenti continuo a togliere - 1
+            }
         }
-
     },
 
     mounted() {
-        this.autoplay();
+        setInterval(this.autoplay, 3000);
     }
 
 });
