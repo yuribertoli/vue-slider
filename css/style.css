@@ -53,7 +53,7 @@
     object-fit: cover;
 }
 
-.thumb.active {
+.thumb.corrente {
     border: 2px solid #ccc;
     opacity: 1;
 }

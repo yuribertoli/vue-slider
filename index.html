@@ -24,8 +24,14 @@
             <div class="prev" @click="previous"></div>
             <div class="next" @click="next"></div>
 
-            <div class="thumb" v-for="immagini in items">
-                <img :src="immagini.url" :alt="immagini.name">
+            <!-- (v-for) ciclo tutti gli oggetti in items con il loro indice  -->
+            <!-- (:class) assegno la classe 'corrente' solo all'immagine che ha lo stesso indice dell'active, altrimenti (:) non assegno niente -->
+            <div class="thumb" :class="indice == active? 'corrente' : '' " v-for="(oggetto, indice) in items">
+                
+                <!-- (:src) ad ogni img assegno l'url presente nell'oggetto ciclato -->
+                <!-- (:alt) ad ogni img assegno l'alt equivalente al nome del paese  -->
+                <img :src="oggetto.url" :alt="oggetto.name">
+
             </div> 
 
         </div>
