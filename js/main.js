@@ -33,7 +33,8 @@ const root = new Vue ({
         ],
 
         //Al caricamento della pagina lascio il primo oggetto di items come default da visualizzare
-        active: 0
+        active: 0,
+
     },
 
     methods: {
@@ -52,7 +53,15 @@ const root = new Vue ({
             } else {
                 this.active++; //altrimenti continuo a togliere - 1
             }
-        }
+        },
+
+        showImage(index) {
+            this.active = index;
+        },
+
+        /* activate(element){
+            this.active = element;
+        } */
 
     }
 

@@ -26,7 +26,8 @@
 
             <!-- (v-for) ciclo tutti gli oggetti in items con il loro indice  -->
             <!-- (:class) assegno la classe 'corrente' solo all'immagine che ha lo stesso indice dell'active, altrimenti (:) non assegno niente -->
-            <div class="thumb" :class="indice == active? 'corrente' : '' " v-for="(oggetto, indice) in items">
+            <!-- (@click) al click su una thumb le assegno la classe 'corrente' -->
+            <div v-for="(oggetto, indice) in items" class="thumb" :class="indice == active? 'corrente' : '' " @click="showImage(indice)">
                 
                 <!-- (:src) ad ogni img assegno l'url presente nell'oggetto ciclato -->
                 <!-- (:alt) ad ogni img assegno l'alt equivalente al nome del paese  -->
