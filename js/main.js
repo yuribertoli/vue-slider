@@ -75,7 +75,7 @@ const root = new Vue ({
 
     },
 
-    //Tramite mounted() ho accesso al DOM dopo la sua creazione e posso accedere ai suoi componenti modificandoli
+    //Tramite mounted() ho accesso al DOM dopo la sua creazione e posso accedere al componente "el"
     //Utilizzo da subito la funzione start per mandare in avanti ogni 3 secondi le slide
     mounted() {
        this.start()  
