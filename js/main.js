@@ -59,17 +59,10 @@ const root = new Vue ({
             this.active = index;
         },
 
-        autoplay() {
-            if (this.active == this.items.length - 1) { //se active è sull'ultimo elemento dell'array
-                this.active = 0; //lo riporto al primo
-            } else {
-                this.active++; //altrimenti continuo a togliere - 1
-            }
-        }
     },
 
     mounted() {
-        setInterval(this.autoplay, 3000);
+        setInterval(this.next, 3000);
     }
 
 });
