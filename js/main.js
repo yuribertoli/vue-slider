@@ -35,6 +35,9 @@ const root = new Vue ({
         //Al caricamento della pagina lascio il primo oggetto di items come default da visualizzare
         active: 0,
 
+        //Creo un valore vuoto dove aggiungo in seguito gli eventi dell'autoplay
+        autoplay: ""
+
     },
 
     methods: {
@@ -55,15 +58,26 @@ const root = new Vue ({
             }
         },
 
+        //funzione per portare active sull'immagine su cui ho cliccato
         showImage(index) {
             this.active = index;
         },
 
+        //funzione per popolare il valore di autoplay con un intervallo che richiama la funzione next
+        start() {
+            this.autoplay = setInterval(this.next, 3000);
+        },
+
+        //funzione per stoppare l'autoplay
+        stop() {
+            clearInterval(this.autoplay);
+        }
+
     },
 
-    //Utilizzo da subito la funzione next per mandare in avanti ogni 3 secondi le slide
+    //Utilizzo da subito la funzione start per mandare in avanti ogni 3 secondi le slide
     mounted() {
-        setInterval(this.next, 3000);
+       this.start()  
     }
 
 });
