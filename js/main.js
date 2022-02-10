@@ -68,13 +68,14 @@ const root = new Vue ({
             this.autoplay = setInterval(this.next, 3000);
         },
 
-        //funzione per stoppare l'autoplay
+        //funzione per stoppare la variabile che determina l'autoplay
         stop() {
             clearInterval(this.autoplay);
         }
 
     },
 
+    //Tramite mounted() ho accesso al DOM dopo la sua creazione e posso accedere ai suoi componenti modificandoli
     //Utilizzo da subito la funzione start per mandare in avanti ogni 3 secondi le slide
     mounted() {
        this.start()  
